@@ -1,61 +1,194 @@
-# Welcome to your Lovable project
+# 🌾 FarmSim — NASA Farm Navigators Challenge (HackAthlone 2025)
 
-## Project info
+FarmSim is an **educational farming simulation** designed for the **NASA Space Apps Challenge 2025 (Athlone)** under the *Farm Navigators: Using NASA Data Exploration in Agriculture* track.  
+It empowers farmers, students, and enthusiasts to **simulate farming decisions**, **observe real-time crop health**, and **understand sustainable agriculture practices** through **NASA’s open Earth observation data**.
 
+<<<<<<< HEAD
 ## How can I edit this code?
+=======
+---
 
-There are several ways of editing your application.
+## 🚀 Overview
+>>>>>>> e7b4803 (code commit)
 
+FarmSim bridges **satellite data** and **on-ground farming insights**.  
+Players manage a virtual farm — making choices about **irrigation, fertilization, and soil care**.  
+The game uses **real NASA datasets (NDVI, soil moisture, temperature, rainfall)** to visualize how decisions impact **crop growth and yield**.
+
+<<<<<<< HEAD
 **Use your preferred IDE**
+=======
+An integrated **AI crop health analyzer** allows users to upload real crop images, compare them with satellite-derived data, and get **decision rectification suggestions**.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🌍 Key Features
 
-Follow these steps:
+- 🛰️ **NASA Open Data Integration**
+  - NDVI, MODIS, SMAP & GPM datasets for realistic soil and vegetation simulation.
+- 🌾 **Interactive Farm Simulation**
+  - Manage your farm plot: irrigate, fertilize, and monitor the results.
+- 🤖 **AI Crop Health Analysis**
+  - Upload crop images to analyze plant health and receive actionable insights.
+- 📊 **Dynamic Dashboard**
+  - Live visualization of soil moisture, temperature, and nutrient trends.
+- 🧠 **Decision Feedback System**
+  - Compares farmer decisions against satellite data and suggests corrections.
+- 🏆 **Gamified Learning**
+  - Earn points for sustainable decisions and improved yield.
+>>>>>>> e7b4803 (code commit)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧩 System Architecture
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+Farmer (User)
+   │
+   ├──> Frontend (Angular-based FarmSim UI)
+   │       ├── Farm Dashboard
+   │       ├── NDVI Map Visualization
+   │       └── Image Upload (Crop Analyzer)
+   │
+   ├──> Backend (Flask / Node.js)
+   │       ├── API Integration Layer (NASA APIs)
+   │       ├── Crop Health AI Model (TensorFlow/PyTorch)
+   │       └── Simulation Engine (Soil, Water, Yield Logic)
+   │
+   └──> Data Sources
+           ├── NASA Earth Observations (MODIS, SMAP, GPM)
+           └── Local Image Dataset (User Uploads)
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🧠 Why This Matters
 
-**Use GitHub Codespaces**
+Agriculture faces a **data accessibility gap** — many farmers lack the tools to interpret satellite data.  
+FarmSim converts **complex NASA datasets into interactive learning experiences**, helping users:
+- Understand the impact of irrigation/fertilizer timing
+- Learn sustainable farming methods
+- Make data-driven decisions for real-world agriculture
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## ⚙️ Setup & Installation
 
-This project is built with:
+### 1. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/FarmSim.git
+cd FarmSim
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 2. Install Dependencies
+#### Frontend (Angular)
+```bash
+cd frontend
+npm install
+ng serve
+```
 
+<<<<<<< HEAD
+=======
+#### Backend (Flask)
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
 
-## Can I connect a custom domain to my Lovable project?
+### 3. Connect NASA APIs
+Create a `.env` file in the backend with:
+```
+NASA_API_KEY=your_api_key_here
+```
+>>>>>>> e7b4803 (code commit)
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🧾 Example Workflow
 
+1. Start the simulation.  
+2. Choose irrigation and fertilization levels.  
+3. Observe soil and NDVI changes on the dashboard.  
+4. Upload a crop image → AI detects stress or disease.  
+5. Receive feedback and corrective suggestions.  
+6. Earn rewards for sustainable decisions!
+
+<<<<<<< HEAD
+=======
+---
+
+## 📂 Project Structure
+
+```
+FarmSim/
+│
+├── frontend/               # Angular UI
+│   ├── src/app/
+│   │   ├── dashboard/
+│   │   ├── simulation/
+│   │   ├── upload/
+│   │   └── services/
+│   └── assets/
+│
+├── backend/                # Flask API + AI Logic
+│   ├── app.py
+│   ├── models/
+│   ├── nasa_integration/
+│   └── utils/
+│
+├── datasets/               # NASA sample data
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 🧩 Datasets Used
+
+| Dataset | Source | Description |
+|----------|---------|-------------|
+| **MODIS NDVI** | NASA EarthData | Crop vegetation index |
+| **SMAP Soil Moisture** | NASA JPL | Root zone and surface moisture |
+| **GPM Precipitation** | NASA GSFC | Daily rainfall patterns |
+| **Landsat Imagery** | USGS/NASA | High-resolution crop area mapping |
+
+---
+
+## 💡 Future Enhancements
+
+- Integration with **NASA POWER API** for real-time solar/rainfall data  
+- Expansion to **livestock and greenhouse** modules  
+- Offline mode for low-connectivity regions  
+- Multilingual UI for global farmer accessibility
+
+---
+
+## 👥 Team
+
+**Team Asterisks — Athlone, Ireland 🇮🇪**  
+- **Mansoor Ahmed** – Software Engineer & System Architect  
+- **Devyani Teddulwar** – Data & Sustainability Research  
+- *(Add other members if any)*
+
+---
+
+## 🏁 License
+
+This project is released under the **MIT License**.  
+Feel free to use, modify, and share with proper attribution.
+
+---
+
+## 🌟 Acknowledgements
+
+- **NASA Earth Science Division** for open data access  
+- **Space Apps Challenge Team** for global collaboration  
+- **Technological University of the Shannon (TUS)** for academic support  
+- **HackAthlone 2025** mentors for guidance and feedback  
+
+---
+
+> “The future of farming lies in understanding the Earth — not just cultivating it.”
+>>>>>>> e7b4803 (code commit)

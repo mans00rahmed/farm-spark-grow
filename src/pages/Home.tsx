@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { getFarms } from "@/lib/data-loader";
 import FarmCard from "@/components/FarmCard";
-import { Sprout } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Sprout, BookOpen, Trophy, Target } from "lucide-react";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -27,6 +29,36 @@ export default function Home() {
         </div>
 
         <div className="max-w-5xl mx-auto">
+          {/* Educational Game Section */}
+          <Card className="shadow-card mb-8 border-primary/20 bg-gradient-primary">
+            <CardContent className="p-8">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 bg-primary-foreground/20 rounded-full">
+                    <BookOpen className="h-8 w-8 text-primary-foreground" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-2xl text-primary-foreground mb-2">
+                      Farm Challenge
+                    </CardTitle>
+                    <CardDescription className="text-primary-foreground/80">
+                      Test your farming knowledge and learn sustainable practices through interactive scenarios
+                    </CardDescription>
+                  </div>
+                </div>
+                <Button
+                  onClick={() => navigate("/farm-challenge")}
+                  variant="secondary"
+                  size="lg"
+                  className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                >
+                  <Target className="h-5 w-5 mr-2" />
+                  Start Challenge
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+
           <h2 className="text-2xl font-semibold mb-6">Select Your Farm</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {farms.map((farm) => (
@@ -36,7 +68,7 @@ export default function Home() {
         </div>
 
         <div className="mt-16 max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-card rounded-lg shadow-card">
               <div className="text-3xl font-bold text-primary mb-2">📊</div>
               <h3 className="font-semibold mb-2">Monitor</h3>
@@ -49,6 +81,13 @@ export default function Home() {
               <h3 className="font-semibold mb-2">Optimize</h3>
               <p className="text-sm text-muted-foreground">
                 Plan irrigation and fertilization for maximum yield
+              </p>
+            </div>
+            <div className="text-center p-6 bg-card rounded-lg shadow-card">
+              <div className="text-3xl font-bold text-primary mb-2">📚</div>
+              <h3 className="font-semibold mb-2">Learn</h3>
+              <p className="text-sm text-muted-foreground">
+                Master sustainable farming through interactive challenges
               </p>
             </div>
             <div className="text-center p-6 bg-card rounded-lg shadow-card">

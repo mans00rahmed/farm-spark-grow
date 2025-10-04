@@ -10,6 +10,7 @@ import Rewards from "./pages/Rewards";
 import History from "./pages/History";
 import PhotoCheck from "./pages/PhotoCheck";
 import PhotoCheckHistory from "./pages/PhotoCheckHistory";
+import FarmChallenge from "./pages/FarmChallenge";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/photo-check-history/:farmId" element={<PhotoCheckHistory />} />
           <Route path="/rewards" element={<Rewards />} />
           <Route path="/history" element={<History />} />
+          <Route path="/farm-challenge" element={<FarmChallenge />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

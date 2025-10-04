@@ -3,13 +3,13 @@ import { getFarms, getNDVIData, getWeatherData } from "@/lib/data-loader";
 import StatusCard from "@/components/StatusCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Droplet, Leaf, TrendingUp, Activity, ArrowLeft, Play, Camera } from "lucide-react";
+import { Droplet, Leaf, TrendingUp, Activity, ArrowLeft, Play, Camera, BookOpen } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 export default function Dashboard() {
   const { farmId } = useParams<{ farmId: string }>();
   const navigate = useNavigate();
-  
+
   if (!farmId) {
     navigate("/");
     return null;
@@ -59,7 +59,7 @@ export default function Dashboard() {
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Farms
           </Button>
-          
+
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold">{farm.name}</h1>
@@ -71,7 +71,7 @@ export default function Dashboard() {
                 className="bg-gradient-primary"
               >
                 <Play className="h-4 w-4 mr-2" />
-                Plan Actions
+                Play Actions
               </Button>
               <Button
                 variant="outline"
@@ -79,6 +79,13 @@ export default function Dashboard() {
               >
                 <Camera className="h-4 w-4 mr-2" />
                 Photo Check
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => navigate("/farm-challenge")}
+              >
+                <BookOpen className="h-4 w-4 mr-2" />
+                Farm Challenge
               </Button>
               <Button
                 variant="outline"
@@ -137,26 +144,26 @@ export default function Dashboard() {
               <ResponsiveContainer width="100%" height={250}>
                 <LineChart data={last7Days}>
                   <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                  <XAxis 
-                    dataKey="date" 
+                  <XAxis
+                    dataKey="date"
                     stroke="hsl(var(--muted-foreground))"
                     fontSize={12}
                   />
-                  <YAxis 
+                  <YAxis
                     stroke="hsl(var(--muted-foreground))"
                     fontSize={12}
                   />
-                  <Tooltip 
+                  <Tooltip
                     contentStyle={{
                       backgroundColor: 'hsl(var(--card))',
                       border: '1px solid hsl(var(--border))',
                       borderRadius: '0.5rem'
                     }}
                   />
-                  <Line 
-                    type="monotone" 
-                    dataKey="NDVI" 
-                    stroke="hsl(var(--success))" 
+                  <Line
+                    type="monotone"
+                    dataKey="NDVI"
+                    stroke="hsl(var(--success))"
                     strokeWidth={3}
                   />
                 </LineChart>
