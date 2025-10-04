@@ -73,11 +73,11 @@ cd FarmSim
 ```
 
 ### 2. Install Dependencies
-#### Frontend (Angular)
+#### Frontend (React)
 ```bash
 cd frontend
 npm install
-ng serve
+npm run dev
 ```
 
 #### Backend (Flask)
@@ -149,15 +149,6 @@ FarmSim/
 - Expansion to **livestock and greenhouse** modules  
 - Offline mode for low-connectivity regions  
 - Multilingual UI for global farmer accessibility
-
----
-
-## 👥 Team
-
-**Team Asterisks — Athlone, Ireland 🇮🇪**  
-- **Mansoor Ahmed** – Software Engineer & System Architect  
-- **Devyani Teddulwar** – Data & Sustainability Research  
-- *(Add other members if any)*
 
 ---
 
