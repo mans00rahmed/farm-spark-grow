@@ -3,21 +3,14 @@
 FarmSim is an **educational farming simulation** designed for the **NASA Space Apps Challenge 2025 (Athlone)** under the *Farm Navigators: Using NASA Data Exploration in Agriculture* track.  
 It empowers farmers, students, and enthusiasts to **simulate farming decisions**, **observe real-time crop health**, and **understand sustainable agriculture practices** through **NASA’s open Earth observation data**.
 
-<<<<<<< HEAD
-## How can I edit this code?
-=======
 ---
 
 ## 🚀 Overview
->>>>>>> e7b4803 (code commit)
 
 FarmSim bridges **satellite data** and **on-ground farming insights**.  
 Players manage a virtual farm — making choices about **irrigation, fertilization, and soil care**.  
 The game uses **real NASA datasets (NDVI, soil moisture, temperature, rainfall)** to visualize how decisions impact **crop growth and yield**.
 
-<<<<<<< HEAD
-**Use your preferred IDE**
-=======
 An integrated **AI crop health analyzer** allows users to upload real crop images, compare them with satellite-derived data, and get **decision rectification suggestions**.
 
 ---
@@ -36,7 +29,6 @@ An integrated **AI crop health analyzer** allows users to upload real crop image
   - Compares farmer decisions against satellite data and suggests corrections.
 - 🏆 **Gamified Learning**
   - Earn points for sustainable decisions and improved yield.
->>>>>>> e7b4803 (code commit)
 
 ---
 
@@ -88,8 +80,6 @@ npm install
 ng serve
 ```
 
-<<<<<<< HEAD
-=======
 #### Backend (Flask)
 ```bash
 cd backend
@@ -102,7 +92,6 @@ Create a `.env` file in the backend with:
 ```
 NASA_API_KEY=your_api_key_here
 ```
->>>>>>> e7b4803 (code commit)
 
 ---
 
@@ -115,8 +104,6 @@ NASA_API_KEY=your_api_key_here
 5. Receive feedback and corrective suggestions.  
 6. Earn rewards for sustainable decisions!
 
-<<<<<<< HEAD
-=======
 ---
 
 ## 📂 Project Structure
@@ -191,4 +178,3 @@ Feel free to use, modify, and share with proper attribution.
 ---
 
 > “The future of farming lies in understanding the Earth — not just cultivating it.”
->>>>>>> e7b4803 (code commit)
