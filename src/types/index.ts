@@ -69,3 +69,25 @@ export interface RewardItem {
   description: string;
   cost: number;
 }
+
+export interface PhotoCheckResult {
+  id: string;
+  farmId: string;
+  timestamp: string;
+  healthScore: number;
+  stressType: "drought" | "nutrient" | "pest_disease" | "other" | "none";
+  confidence: number;
+  keyFindings: string[];
+  urgency: "low" | "medium" | "high";
+  advice: string;
+  suggestedActions: Array<{
+    date: string;
+    type: "irrigate" | "fertilize";
+    amount: number;
+    reason: string;
+  }> | null;
+  conflicts: string[];
+  fixApplied: boolean;
+  beforeYield?: number;
+  afterYield?: number;
+}

@@ -3,7 +3,7 @@ import { getFarms, getNDVIData, getWeatherData } from "@/lib/data-loader";
 import StatusCard from "@/components/StatusCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Droplet, Leaf, TrendingUp, Activity, ArrowLeft, Play } from "lucide-react";
+import { Droplet, Leaf, TrendingUp, Activity, ArrowLeft, Play, Camera } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 export default function Dashboard() {
@@ -65,13 +65,20 @@ export default function Dashboard() {
               <h1 className="text-3xl font-bold">{farm.name}</h1>
               <p className="text-muted-foreground mt-1">Last updated: {latestNDVI.date}</p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
               <Button
                 onClick={() => navigate(`/simulation/${farmId}`)}
                 className="bg-gradient-primary"
               >
                 <Play className="h-4 w-4 mr-2" />
                 Plan Actions
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => navigate(`/photo-check/${farmId}`)}
+              >
+                <Camera className="h-4 w-4 mr-2" />
+                Photo Check
               </Button>
               <Button
                 variant="outline"
