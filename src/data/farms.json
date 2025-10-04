@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "farm-1",
+        "name": "Athlone East"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-7.946, 53.424],
+            [-7.936, 53.424],
+            [-7.936, 53.418],
+            [-7.946, 53.418],
+            [-7.946, 53.424]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "farm-2",
+        "name": "Athlone West"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-7.966, 53.425],
+            [-7.956, 53.425],
+            [-7.956, 53.419],
+            [-7.966, 53.419],
+            [-7.966, 53.425]
+          ]
+        ]
+      }
+    }
+  ]
+}
